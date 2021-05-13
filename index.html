@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 id="title">Normal form submit</h1>
+
+    <ul id="mylist">
+      <li>this is my one</li>
+    </ul>
+
+    <form id="myform" action="">
+
+      <input type="text" class="form-control mb-3" name="title" value="nooo">
+
+      <button type="submit" class="btn btn-primary">ADD</button>
+    </form>
+
+  </div>
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js""></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+
+      $('body').on("submit", "#myform", function (e) {
+        e.preventDefault();
+
+        let a = $('#myform input[name=title]').val();
+
+        $('#mylist').append("<li>" + a + "</li>");
+
+      })
+
+
+
+
+    })
+
+  </script>
+</body>
+
+</html>
